@@ -4,8 +4,11 @@
   "private": true,
   "dependencies": {
     "react": "^16.4.1",
+    "react-circle-progress": "^1.0.6",
+    "react-circular-progressbar": "^0.8.0",
     "react-dom": "^16.4.1",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "react-sweet-progress": "^1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",

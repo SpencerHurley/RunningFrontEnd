@@ -1,19 +1,30 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import runner from './Running.jpg';
+import Runner from './running.jpg';
 import './App.css';
+import { Progress } from 'react-sweet-progress';
+import "react-sweet-progress/lib/style.css";
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+        this.weeklyGoal = 30;
+        this.currentProgress = 27;
+    }
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={runner} className="App-logo" alt="logo" />
+          <img src={Runner} className="App-logo" alt="logo" />
           <h1 className="App-title">Running Log Home</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+          <p className="App-intro">
+              Weekly Mileage Completion: {this.currentProgress} of {this.weeklyGoal} miles completed.
+          </p>
+          <Progress type="circle" percent={this.currentProgress / this.weeklyGoal * 100} />
+          <p>
+              Today's run:
+          </p>
       </div>
     );
   }
